@@ -35,7 +35,12 @@ namespace DataAccess.Concrete.InMemory
                 },
                 new Product { ProductId = 5, CategoryId = 2, ProductName = "Fare", UnitPrice = 85, UnitsInStock = 1 }
             };
+
+  
+
         }
+
+       
 
         public void Add(Product product)
         {
@@ -82,5 +87,107 @@ namespace DataAccess.Concrete.InMemory
         {
             throw new NotImplementedException();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Single Line query
+        //AnyTest();
+
+        //FindTest();
+
+        //FindAllTest();
+
+        //AscDescTest();
+
+        //ClassicLinqTest();
+
+
+        //Linqexp();
+
+
+
+
+
+
+        //private void Linqexp()
+        //{
+        //    var result = from p in _products
+        //                 join c in categories
+        //                 on p.CategoryId equals c.CategoryId
+        //                 where p.UnitePrice > 500
+        //                 orderby p.UnitePrice descending
+        //                 select new ProductDto { ProductId = p.ProductId, CategoryName = c.CategoryName.........};
+
+        //    foreach (var ProductDto in result)
+        //    {
+        //        Console.WriteLine("{0} --- {1}", ProductDto.ProductName, ProductDto.CategoryName);
+        //    }
+        //}
+
+        //private void ClassicLinqTest()
+        //{
+        //    var result = from p in _products
+        //                 where p.UnitPrice > 500
+        //                 orderby p.UnitPrice descending, p.ProductName ascending
+        //                 select new ProductDto { ProductId = p.ProductId, ProductName = p.ProductName, UnitePrice = p.UnitPrice, };
+
+        //    foreach (var product in result)
+        //    {
+        //        Console.WriteLine(product.ProductName);
+        //    }
+        //}
+
+        //private void AscDescTest()
+        //{
+        //    var result = _products.Where(p => p.ProductName.Contains("a")).OrderBy(p => p.UnitPrice).ThenByDescending(p => p.ProductName);
+
+        //    foreach (var product in result)
+        //    {
+        //        Console.WriteLine(product.ProductName);
+        //    }
+        //}
+
+        //private void FindAllTest()
+        //{
+        //    var result = _products.FindAll(p => p.ProductName.Contains("a"));
+        //    Console.WriteLine(result);
+        //}
+
+        //private void FindTest()
+        //{
+        //    var result = _products.Find(p => p.ProductId == 3);
+        //    Console.WriteLine(result.ProductName);
+        //}
+
+        //private void AnyTest()
+        //{
+        //    var result = _products.Any(p => p.ProductName == "Bardak");
+        //    Console.WriteLine(result);
+        //}
+
+
+
     }
+
+    
 }
